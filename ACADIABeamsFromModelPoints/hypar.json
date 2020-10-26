@@ -1,0 +1,37 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "8938e2cf-898c-49f1-ab4a-7a67fb5cea5b",
+  "name": "ACADIA.BeamsFromModelPoints",
+  "description": "The ACADIABeamsFromModelPoints function.",
+  "language": "C#",
+  "model_dependencies": [
+    {
+      "name": "BlobData",
+      "optional": false
+    }
+  ],
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "Threshold": {
+        "type": "number",
+        "description": "Distance threshold to determine which points get connected.",
+        "minimum": 10.0,
+        "maximum": 100.0,
+        "multipleOf": 1.0,
+        "$hyparUnitType": "length"
+      }
+    }
+  },
+  "outputs": [
+    {
+      "unit_type": "volume",
+      "name": "Number of beams",
+      "description": "The total number of beams.",
+      "type": "number"
+    }
+  ],
+  "repository_url": "https://github.com/hypar-io/function",
+  "source_file_key": null,
+  "preview_image": null
+}

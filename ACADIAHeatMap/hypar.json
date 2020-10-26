@@ -1,0 +1,42 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "0a785f25-ff9b-4524-b9e6-b130234266d4",
+  "name": "ACADIA_HeatMap",
+  "description": "The ACADIAHeatMap function.",
+  "language": "C#",
+  "model_dependencies": [
+    {
+      "name": "Envelope",
+      "optional": false
+    },
+    {
+      "name": "BlobData",
+      "optional": false
+    }
+  ],
+
+  "inputs": [
+    {
+      "min": 1.0,
+      "max": 10.0,
+      "step": 1.0,
+      "unit_type": "length",
+      "name": "Cell Size",
+      "description": "Target size of cell.",
+      "type": "range"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "Debug",
+      "description": "The vals of cells.",
+      "type": "string"
+    }
+  ],
+  "element_types":[
+    "https://raw.githubusercontent.com/hypar-io/Schemas/master/Envelope.json"
+  ],
+  "repository_url": "https://github.com/hypar-io/function",
+  "source_file_key": null,
+  "preview_image": null
+}

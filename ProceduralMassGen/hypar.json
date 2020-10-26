@@ -1,0 +1,56 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "a1a6ed8e-b290-47a8-81ec-7aee86247dd5",
+  "name": "ProceduralMassGen",
+  "description": "The ProceduralMassGen function.",
+  "language": "C#",
+  "inputs": [
+    {
+      "primitive_type": "polygon",
+      "name": "Perimeter",
+      "description": "Perimeter of the building site.",
+      "type": "geometry"
+    },
+    {
+      "min": 30.0,
+      "max": 80.0,
+      "step": 10.0,
+      "unit_type": "length",
+      "name": "MinBuildHeight",
+      "description": "Min height of the building from grade.",
+      "type": "range"
+    },
+    {
+      "min": 60.0,
+      "max": 120.0,
+      "step": 10.0,
+      "unit_type": "length",
+      "name": "MaxBuildHeight",
+      "description": "Max height of the building from grade.",
+      "type": "range"
+    },
+    {
+      "min": 0.0,
+      "max": 1.0,
+      "step": 0.01,
+      "unit_type": "length",
+      "name": "StartParam",
+      "description": "Parameter which determines where the building starts growing.",
+      "type": "range"
+    }
+  ],
+  "outputs": [
+    {
+      "unit_type": "none",
+      "name": "Volume",
+      "description": "The volume.",
+      "type": "number"
+    }
+  ],
+  "element_types": [
+    "https://raw.githubusercontent.com/hypar-io/Schemas/master/Envelope.json"
+  ],
+  "repository_url": "https://github.com/hypar-io/function",
+  "source_file_key": null,
+  "preview_image": null
+}
